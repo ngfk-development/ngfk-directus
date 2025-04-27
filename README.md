@@ -29,6 +29,9 @@ Most of the Google Cloud Platform infrastructure is deployed using Terraform. To
    - Attribute conditions: `attribute.repository=="ngfk-development/ngfk-directus"`
 1. Grant service-account access to WIF
    - Filter: `repository` = `ngfk-development/ngfk-directus`
+1. Add the service account to Google Search Console
+   - Email: `github-actions@ngfk-directus-458008.iam.gserviceaccount.com`
+   - Permission: `Owner`
 1. Configure OAuth consent screen
    - App name: `Directus`
    - Audience: `Internal`
