@@ -81,6 +81,12 @@ module "directus" {
     "admin.mokuminalmere.nl",
   ]
 
+  client_domains = [
+    "localhost:3000",
+    "test.mokuminalmere.nl",
+    "mokuminalmere.nl",
+  ]
+
   directus_secret = local.env["DIRECTUS_SECRET"]
 
   database_name       = local.env["DATABASE_NAME"]

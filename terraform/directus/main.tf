@@ -261,6 +261,16 @@ resource "google_cloud_run_v2_service" "directus" {
       }
 
       env {
+        name  = "CACHE_AUTO_PURGE"
+        value = "true"
+      }
+
+      env {
+        name  = "CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_SRC"
+        value = jsonencode(var.client_domains)
+      }
+
+      env {
         name  = "PRESSURE_LIMITER_ENABLED"
         value = "false"
       }
