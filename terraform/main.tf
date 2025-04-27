@@ -82,9 +82,10 @@ module "directus" {
   ]
 
   client_domains = [
-    "localhost:3000",
-    "test.mokuminalmere.nl",
-    "mokuminalmere.nl",
+    "'self'",
+    "http://localhost:3000",
+    "https://test.mokuminalmere.nl",
+    "https://mokuminalmere.nl",
   ]
 
   directus_secret = local.env["DIRECTUS_SECRET"]
