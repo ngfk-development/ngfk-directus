@@ -267,7 +267,7 @@ resource "google_cloud_run_v2_service" "directus" {
 
       env {
         name  = "CONTENT_SECURITY_POLICY_DIRECTIVES__FRAME_SRC"
-        value = jsonencode(var.client_domains)
+        value = join(" ", var.client_domains)
       }
 
       env {
