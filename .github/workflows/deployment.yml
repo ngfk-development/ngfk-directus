@@ -82,7 +82,6 @@ jobs:
         working-directory: terraform
         run: >-
           terraform plan
-          -no-color
           -input=false
           -var="project_id=$GCP_PROJECT"
           -var="region=$GCP_REGION"

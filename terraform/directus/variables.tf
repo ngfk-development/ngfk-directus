@@ -10,6 +10,10 @@ variable "domains" {
   type = list(string)
 }
 
+variable "client_domains" {
+  type = list(string)
+}
+
 variable "directus_secret" {
   type = string
 }
