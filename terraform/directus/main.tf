@@ -98,7 +98,7 @@ resource "google_cloud_run_v2_service" "directus" {
   location = var.location
   ingress  = "INGRESS_TRAFFIC_ALL"
 
-  deletion_protection = false
+  deletion_protection = true
 
   template {
     containers {
