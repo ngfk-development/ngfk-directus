@@ -47,11 +47,11 @@ resource "terraform_data" "push_image" {
   }
 }
 
-module "database" {
+module "database_15" {
   source = "./database"
 
   authorized_networks = [
-    { name = "Home", value = "31.20.112.229" }
+    { name = "Home", value = "85.144.242.46" }
   ]
 
   database_name = local.env["DATABASE_NAME"]
@@ -93,7 +93,7 @@ module "directus" {
   database_name       = local.env["DATABASE_NAME"]
   database_user       = local.env["DATABASE_USER"]
   database_pass       = local.env["DATABASE_PASS"]
-  database_connection = module.database.connection_name
+  database_connection = module.database_15.connection_name
   database_port       = "5432"
 
   google_client_id     = local.env["GOOGLE_CLIENT_ID"]
